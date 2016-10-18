@@ -60,7 +60,7 @@
 #define BITOP_WORD(nr)		((nr) / BITS_PER_LONG)
 #define PAGE_SHIFT		12
 
-#define PALLOC_MASK		0x3000
+#define PALLOC_MASK		0x03000
 
 /* Function Prototypes */
 static void		show_summary(void);
@@ -203,7 +203,7 @@ static void parse_pid(char *pid_s)
 
 		/* Make sure that the correct number of arguments were read */
 		if (n < 10) {
-			fprintf(stderr, "Unexpected line : %s\n", buf);
+			printf("Unexpected line : %s\n", buf);
 			continue;
 		}
 
@@ -216,7 +216,7 @@ static void parse_pid(char *pid_s)
 #endif
 
 		if (++nr_vmas >= MAX_VMAS) {
-			fprintf(stderr, "Too many VMAS\n");
+			printf("Too many VMAS\n");
 			break;
 		}
 	}
@@ -430,7 +430,7 @@ static void walk_pfn(unsigned long voffset, unsigned long index, unsigned long c
 static void add_page(unsigned long voffset, unsigned long offset, uint64_t flags)
 {
 	/* Print page to output stream */
-	fprintf(stderr, "0x%.8lx : 0x%.12lx\n", voffset, offset);
+	// fprintf(stderr, "0x%.8lx : 0x%.12lx\n", voffset, offset);
 
 	total_pages++;
 

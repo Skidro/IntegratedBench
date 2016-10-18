@@ -149,10 +149,10 @@ void quit(int param)
 #endif
 
 #if (MEM_CTL == 1)
-	fprintf(stdout, "\nStack \t\t\t : %p\n", &stack);
-	fprintf(stdout, "Heap \t\t\t : %p\n", g_mem_ptr);
-	fprintf(stdout, "BSS \t\t\t : %p\n", &g_mem_ptr);
-	fprintf(stdout, "Text \t\t\t : %p\n", quit);
+	printf("\nStack \t\t\t : %p\n", &stack);
+	printf("Heap \t\t\t : %p\n", g_mem_ptr);
+	printf("BSS \t\t\t : %p\n", &g_mem_ptr);
+	printf("Text \t\t\t : %p\n", quit);
 #endif
 
 	pagetype(pid_s);
@@ -212,6 +212,7 @@ int main(int argc, char *argv[])
 
 	/* Create argument list to be passed to pagetype program */
 	my_pid = getpid();
+	fprintf(stderr, "%d", (int)my_pid);
 	sprintf(pid_s, "%llu", my_pid);
 
 #if (PROFILE_CTL == 1)
@@ -222,16 +223,16 @@ int main(int argc, char *argv[])
 	memset (&pe_a, 0, sizeof(struct perf_event_attr));
 	memset (&pe_m, 0, sizeof(struct perf_event_attr));
 	
-	pe_a.type			= PERF_TYPE_HARDWARE;
+	pe_a.type			= PERF_TYPE_RAW;
 	pe_a.size			= sizeof(struct perf_event_attr);
-	pe_a.config			= PERF_COUNT_HW_CACHE_REFERENCES;
+	pe_a.config			= 0x50;
 	pe_a.disabled			= 1;
 	pe_a.exclude_kernel		= 1;
 	pe_a.exclude_hv			= 1;
 
-	pe_m.type			= PERF_TYPE_HARDWARE;
+	pe_m.type			= PERF_TYPE_RAW;
 	pe_m.size			= sizeof(struct perf_event_attr);
-	pe_m.config			= PERF_COUNT_HW_CACHE_MISSES;
+	pe_m.config			= 0x52;
 	pe_m.disabled			= 1;
 	pe_m.exclude_kernel		= 1;
 	pe_m.exclude_hv			= 1;
@@ -240,7 +241,7 @@ int main(int argc, char *argv[])
 	fd_m = perf_event_open(&pe_m, 0, -1, -1, 0);
 
 	if (fd_a == -1 || fd_m == -1) {
-		fprintf(stderr, "Error opening leader a : %llx | m : %llx\n", pe_a.config, pe_m.config);
+		printf("Error opening leader a : %llx | m : %llx\n", pe_a.config, pe_m.config);
 		exit(EXIT_FAILURE);
 	}
 #endif
@@ -280,7 +281,7 @@ int main(int argc, char *argv[])
 			if (setpriority(PRIO_PROCESS, 0, prio) < 0)
 				perror("error");
 			else
-				fprintf(stderr, "assigned priority %d\n", prio);
+				printf("assigned priority %d\n", prio);
 			break;
 		case 'i': /* iterations */
 			iterations = strtol(optarg, NULL, 0);
