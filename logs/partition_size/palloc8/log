@@ -1,0 +1,189 @@
+[0;32m[STATUS] Profiling working-set: 64[0m
+total sum = 838049980416
+
+Stack 			 : 0x7ff350f524
+Heap 			 : 0x496630
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        141        0
+	 Color[00] 	 : 	         44        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 128[0m
+total sum = 3353838338048
+
+Stack 			 : 0x7fd84737d4
+Heap 			 : 0x496630
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        157        0
+	 Color[00] 	 : 	         60        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 192[0m
+total sum = 7547365072896
+
+Stack 			 : 0x7fcab1f4c4
+Heap 			 : 0x7f86842010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        175        0
+	 Color[00] 	 : 	         78        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 256[0m
+total sum = 13418630184960
+
+Stack 			 : 0x7febf65c64
+Heap 			 : 0x7fad71c010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        191        0
+	 Color[00] 	 : 	         94        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 320[0m
+total sum = 20967633674240
+
+Stack 			 : 0x7fc58e66e4
+Heap 			 : 0x7f8bf61010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        207        0
+	 Color[00] 	 : 	        110        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 512[0m
+total sum = 53681074405376
+
+Stack 			 : 0x7fe3a54464
+Heap 			 : 0x7faf55c010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        255        0
+	 Color[00] 	 : 	        158        0
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 1024[0m
+total sum = 214737404952576
+
+Stack 			 : 0x7fefe618e4
+Heap 			 : 0x7f7ee97010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        383        1
+	 Color[00] 	 : 	        286        1
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 2048[0m
+total sum = 858975834472448
+
+Stack 			 : 0x7fd269cd34
+Heap 			 : 0x7fa7a67010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	        639        2
+	 Color[00] 	 : 	        542        2
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+
+[0;32m[STATUS] Profiling working-set: 4096[0m
+total sum = 3435955767214080
+
+Stack 			 : 0x7feddf1994
+Heap 			 : 0x7fa0a99010
+BSS 			 : 0x492a40
+Text 			 : 0x400a88
+
+===========================================================
+	 Color Number 	 : 	      Pages 	 Size (MB)
+===========================================================
+	    ### 	 : 	       1151        4
+	 Color[00] 	 : 	       1054        4
+	 Color[01] 	 : 	         14        0
+	 Color[02] 	 : 	          9        0
+	 Color[03] 	 : 	         12        0
+	 Color[04] 	 : 	         16        0
+	 Color[05] 	 : 	          8        0
+	 Color[06] 	 : 	         21        0
+	 Color[07] 	 : 	         17        0
+

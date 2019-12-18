@@ -60,7 +60,7 @@
 #define BITOP_WORD(nr)		((nr) / BITS_PER_LONG)
 #define PAGE_SHIFT		12
 
-#define PALLOC_MASK		0x03000
+#define PALLOC_MASK		0x18000
 
 /* Function Prototypes */
 static void		show_summary(void);
@@ -465,6 +465,7 @@ static int pfn_to_colors(uint64_t pfn)
 		idx++;
 	}
 
+	// printf ("Page: 0x%-8lx | %d\n", pfn, color);
 	return color;
 }
 

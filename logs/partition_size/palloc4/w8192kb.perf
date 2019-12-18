@@ -1,0 +1,10 @@
+# started on Tue Dec 17 03:19:34 2019
+
+
+ Performance counter stats for './bandwidth -c 3 -t 100 -i 100000 -m 8192':
+
+    21,852,516,282      r16                                                         
+     7,328,915,279      r17                                                         
+
+     100.009583161 seconds time elapsed
+

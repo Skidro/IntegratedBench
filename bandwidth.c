@@ -105,9 +105,9 @@ void quit(int param)
 {
 	int		stack = 0;
 
-#if (PRINT_ON == 1)
-	float		dur_in_sec;
-	float		bw, dur;
+#if (PRINT_ON == 1 || PROFILE_CTL == 1)
+	float		dur, dur_in_sec;
+	float 		bw;
 #endif
 
 #if (PROFILE_CTL == 1)
@@ -128,9 +128,12 @@ void quit(int param)
 	close (fd_m);
 #endif
 
-#if (PRINT_ON == 1)
+#if (PRINT_ON == 1 || PROFILE_CTL == 1)
 	dur = get_usecs() - g_start;
 	dur_in_sec = (float)dur / 1000000;
+#endif
+
+#if (PRINT_ON == 1)
 	printf("g_nread(bytes read) = %lld\n", (long long)g_nread);
 	printf("elapsed = %.2f sec ( %.0f usec )\n", dur_in_sec, dur);
 	bw = (float)g_nread / dur_in_sec / 1024 / 1024;
@@ -202,7 +205,7 @@ int main(int argc, char *argv[])
 {
 	int64_t sum = 0;
 	unsigned finish = 5;
-	int prio = 0;        
+	int prio = 0;
 	int num_processors;
 	int acc_type = READ;
 	int opt;
@@ -212,7 +215,7 @@ int main(int argc, char *argv[])
 
 	/* Create argument list to be passed to pagetype program */
 	my_pid = getpid();
-	fprintf(stderr, "%d", (int)my_pid);
+	// fprintf(stderr, "%d", (int)my_pid);
 	sprintf(pid_s, "%llu", my_pid);
 
 #if (PROFILE_CTL == 1)
@@ -222,17 +225,17 @@ int main(int argc, char *argv[])
 	/* Initialize perf events */
 	memset (&pe_a, 0, sizeof(struct perf_event_attr));
 	memset (&pe_m, 0, sizeof(struct perf_event_attr));
-	
+
 	pe_a.type			= PERF_TYPE_RAW;
 	pe_a.size			= sizeof(struct perf_event_attr);
-	pe_a.config			= 0x50;
+	pe_a.config			= 0x16;
 	pe_a.disabled			= 1;
 	pe_a.exclude_kernel		= 1;
 	pe_a.exclude_hv			= 1;
 
 	pe_m.type			= PERF_TYPE_RAW;
 	pe_m.size			= sizeof(struct perf_event_attr);
-	pe_m.config			= 0x52;
+	pe_m.config			= 0x17;
 	pe_m.disabled			= 1;
 	pe_m.exclude_kernel		= 1;
 	pe_m.exclude_hv			= 1;
